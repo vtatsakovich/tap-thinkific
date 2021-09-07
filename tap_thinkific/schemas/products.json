@@ -1,0 +1,134 @@
+{
+	"type": ["null", "object"],
+	"selected": true,
+	"additionalProperties": false,
+	"properties": {
+		"id": {
+			"type": ["null", "integer"]
+		},
+		"created_at": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"productable_id": {
+			"type": ["null", "integer"]
+		},
+		"productable_type": {
+			"type": ["null", "string"]
+		},
+		"price": {
+			"type": ["null", "string"]
+		},
+		"position": {
+			"type": ["null", "integer"]
+		},
+		"status": {
+			"type": ["null", "string"]
+		},
+		"name": {
+			"type": ["null", "string"]
+		},
+		"private": {
+			"type": ["null", "boolean"]
+		},
+		"hidden": {
+			"type": ["null", "boolean"]
+		},
+		"subscription": {
+			"type": ["null", "boolean"]
+		},
+		"days_until_expiry": {
+			"type": ["null", "integer"]
+		},
+		"has_certificate": {
+			"type": ["null", "boolean"]
+		},
+		"keywords": {
+			"type": ["null", "string"]
+		},
+		"seo_title": {
+			"type": ["null", "string"]
+		},
+		"seo_description": {
+			"type": ["null", "string"]
+		},
+		"collection_ids": {
+			"type": ["null", "array"],
+			"items": {
+				"type": ["null", "integer"]
+			}
+		},
+		"related_product_ids": {
+			"type": ["null", "array"],
+			"items": {
+				"type": ["null", "integer"]
+			}
+		},
+		"description": {
+			"type": ["null", "string"]
+		},
+		"card_image_url": {
+			"type": ["null", "string"]
+		},
+		"instructor_names": {
+			"type": ["null", "string"]
+		},
+		"slug": {
+			"type": ["null", "string"]
+		},
+		"product_prices": {
+			"type": ["null", "array"],
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": ["null", "integer"]
+					},
+					"is_primary": {
+						"type": ["null", "boolean"]
+					},
+					"payment_type": {
+						"type": ["null", "string"]
+					},
+					"label": {
+						"type": ["null", "string"]
+					},
+					"price": {
+						"type": ["null", "string"]
+					},
+					"days_until_expiry": {
+						"type": ["null", "string"]
+					},
+					"pay_button_text": {
+						"type": ["null", "string"]
+					},
+					"number_of_payments": {
+						"type": ["null", "string"]
+					},
+					"interval": {
+						"type": ["null", "boolean"]
+					},
+					"interval_count": {
+						"type": ["null", "string"]
+					},
+					"trial_interval": {
+						"type": ["null", "string"]
+					},
+					"trial_interval_count": {
+						"type": ["null", "string"]
+					},
+					"custom_first_price": {
+						"type": ["null", "string"]
+					},
+					"price_name": {
+						"type": ["null", "string"]
+					},
+					"currency": {
+						"type": ["null", "string"]
+					}
+				}
+			}
+		}
+	},
+	"key_properties": ["id"]
+}

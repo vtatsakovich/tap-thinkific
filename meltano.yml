@@ -1,0 +1,20 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: tap-thinkific
+plugins:
+  extractors:
+  - name: tap-thinkific
+    namespace: tap_thinkific
+    executable: ./tap-thinkific.sh
+    capabilities:
+    - state
+    - catalog
+    - discover
+    config:
+      auth_token: '4fa8844d8b7a8f20553d2de5f7db77f5'
+      subdomain: 'sam-s-school-aabe'
+    settings:
+      - name: auth_token
+      - name: subdomain
+      - name: start_date
+        value: '2020-01-01T00:00:00Z'
