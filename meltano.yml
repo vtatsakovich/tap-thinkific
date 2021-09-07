@@ -1,0 +1,27 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: tap-thinkific
+plugins:
+  extractors:
+  - name: tap-thinkific
+    namespace: tap_thinkific
+    executable: tap-thinkific
+    capabilities:
+    - state
+    - catalog
+    - discover
+    config:
+      auth_token:
+      subdomain:
+      api_url: 'https://api.thinkific.com/api/public/v1'
+      start_date: '2010-01-01T00:00:00Z'
+    settings:
+    - name: auth_token
+    - name: subdomain
+    - name: api_url
+    - name: start_date
+      value: '2010-01-01T00:00:00Z'
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl
