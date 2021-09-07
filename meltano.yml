@@ -5,6 +5,8 @@ plugins:
   extractors:
   - name: tap-thinkific
     namespace: tap_thinkific
+    # TODO: To test using Meltano, replace with absolute path
+    #       to the tap-thinkific.sh script:
     executable: ./tap-thinkific.sh
     capabilities:
     - state
@@ -18,3 +20,7 @@ plugins:
       - name: subdomain
       - name: start_date
         value: '2020-01-01T00:00:00Z'
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl

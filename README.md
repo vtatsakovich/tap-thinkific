@@ -2,11 +2,9 @@
 
 `tap-thinkific` is a Singer tap for Thinkific.
 
-Built with the Meltano [SDK](https://gitlab.com/meltano/sdk) for Singer Taps.
+Built with the [Meltano Tap SDK](https://sdk.meltano.com) for Singer Taps.
 
 ## Installation
-
-- [ ] `Developer TODO:` Update the below as needed to correctly describe the install procedure. For instance, if you do not have a PyPi repo, or if you want users to directly install from your git repo, you can modify this step as appropriate.
 
 ```bash
 pipx install tap-thinkific
@@ -22,7 +20,7 @@ A full list of supported settings and capabilities for this
 tap is available by running:
 
 ```bash
-tap-thinkific.sh --about
+tap-thinkific --about
 ```
 
 ### Source Authentication and Authorization
@@ -31,7 +29,7 @@ tap-thinkific.sh --about
 
 ## Usage
 
-You can easily run `tap-thinkific` by itself or in a pipeline using [Meltano](www.meltano.com).
+You can easily run `tap-thinkific` by itself or in a pipeline using [Meltano](https://meltano.com/).
 
 ### Executing the Tap Directly
 
