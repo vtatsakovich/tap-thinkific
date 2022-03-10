@@ -70,3 +70,10 @@ class ThinkificStream(RESTStream):
         """As needed, append or transform raw data to match expected structure."""
         # TODO: Delete this method if not needed.
         return row
+
+    def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
+        if self.name == "groups":
+            return {
+                "group_id": record["id"]
+            }
+    

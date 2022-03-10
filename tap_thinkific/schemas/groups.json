@@ -1,0 +1,21 @@
+{
+	"type": ["null", "object"],
+	"selected": true,
+	"additionalProperties": false,
+	"properties": {
+		"id": {
+			"type": ["null", "integer"]
+		},
+		"created_at": {
+			"type": ["null", "string"],
+			"format": "date-time"
+		},
+		"name": {
+			"type": ["null", "string"]
+		},
+		"token": {
+			"type": ["null", "string"]
+		}
+	},
+	"key_properties": ["id"]
+}

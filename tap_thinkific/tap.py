@@ -7,17 +7,21 @@ from singer_sdk import typing as th  # JSON schema typing helpers
 
 
 from tap_thinkific.streams import (
+    GroupsStream,
     CoursesStream,
     EnrollmentsStream,
     ProductsStream,
     UsersStream,
+    GroupsUsersStream
 )
 
 STREAM_TYPES = [
+    GroupsStream,
     CoursesStream,
     EnrollmentsStream,
     ProductsStream,
     UsersStream,
+    GroupsUsersStream
 ]
 
 
