@@ -69,7 +69,6 @@ class ThinkificStream(RESTStream):
         """Parse the response and return an iterator of result rows."""
         # TODO: Parse response body and return a set of records.
         LOGGER.info('Making pause before next request')
-        print('Making pause before next request')
         time.sleep(2)
 
         yield from extract_jsonpath(self.records_jsonpath, input=response.json())
