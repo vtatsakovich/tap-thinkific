@@ -1,7 +1,7 @@
 """REST client handling, including ThinkificStream base class."""
 
 import requests
-import logging
+import singer
 from pathlib import Path
 from typing import Any, Dict, Optional, Union, List, Iterable
 
@@ -11,7 +11,7 @@ from .auth import ThinkificAuthenticator
 
 
 SCHEMAS_DIR = Path(__file__).parent / Path("./schemas")
-
+LOGGER = singer.get_logger()
 
 class ThinkificStream(RESTStream):
     """Thinkific stream class."""
@@ -66,7 +66,7 @@ class ThinkificStream(RESTStream):
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         """Parse the response and return an iterator of result rows."""
         # TODO: Parse response body and return a set of records.
-        logging.debug("Response received successfully.")
+        LOGGER.info('Getting response')
 
         yield from extract_jsonpath(self.records_jsonpath, input=response.json())
 
