@@ -1,6 +1,7 @@
 """REST client handling, including ThinkificStream base class."""
 
 import requests
+import logging
 from pathlib import Path
 from typing import Any, Dict, Optional, Union, List, Iterable
 
@@ -65,6 +66,8 @@ class ThinkificStream(RESTStream):
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         """Parse the response and return an iterator of result rows."""
         # TODO: Parse response body and return a set of records.
+        logging.debug("Response received successfully.")
+
         yield from extract_jsonpath(self.records_jsonpath, input=response.json())
 
     def post_process(self, row: dict, context: Optional[dict]) -> dict:
