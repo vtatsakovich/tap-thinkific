@@ -22,6 +22,7 @@ class ThinkificStream(RESTStream):
 
     records_jsonpath = "$.items[*]"  # Or override `parse_response`.
     next_page_token_jsonpath = "$.meta.pagination.next_page"  # Or override `get_next_page_token`.
+    extra_retry_statuses: List[int] = [429]
 
     @property
     def http_headers(self) -> dict:
