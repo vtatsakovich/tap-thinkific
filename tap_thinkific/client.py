@@ -59,6 +59,7 @@ class ThinkificStream(RESTStream):
         return params
 
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
+        time.sleep(0.5)
         yield from extract_jsonpath(self.records_jsonpath, input=response.json())
 
     def post_process(self, row: dict, context: Optional[dict]) -> dict:
