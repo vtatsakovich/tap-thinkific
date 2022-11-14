@@ -1,5 +1,6 @@
 """REST client handling, including ThinkificStream base class."""
 
+import time
 import requests
 import singer
 from pathlib import Path
@@ -41,6 +42,7 @@ class ThinkificStream(RESTStream):
         # TODO: If pagination is required, return a token which can be used to get the
         #       next page. If this is the final page, return "None" to end the
         #       pagination loop.
+
         if self.next_page_token_jsonpath:
             all_matches = extract_jsonpath(
                 self.next_page_token_jsonpath, response.json()
@@ -66,7 +68,9 @@ class ThinkificStream(RESTStream):
     def parse_response(self, response: requests.Response) -> Iterable[dict]:
         """Parse the response and return an iterator of result rows."""
         # TODO: Parse response body and return a set of records.
-        LOGGER.info('Getting response')
+        LOGGER.info('Making pause before next request')
+        print('Making pause before next request')
+        time.sleep(2)
 
         yield from extract_jsonpath(self.records_jsonpath, input=response.json())
 
