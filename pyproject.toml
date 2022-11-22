@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tap-thinkific"
-version = "1.0.7"
+version = "1.0.9"
 description = "`tap-thinkific` is a Singer tap for Thinkific, built with the Meltano SDK for Singer Taps."
 authors = ["Brett Hawson", "Volodymyr Tatsakovych"]
 license = "Apache 2.0"
